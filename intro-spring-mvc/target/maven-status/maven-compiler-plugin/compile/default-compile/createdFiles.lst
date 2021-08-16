@@ -1,0 +1,4 @@
+br\com\devmedia\curso\config\SpringMvcConfig.class
+br\com\devmedia\curso\config\RootConfig.class
+br\com\devmedia\curso\config\SpringInitConfig.class
+br\com\devmedia\curso\web\controller\WelcomeController.class

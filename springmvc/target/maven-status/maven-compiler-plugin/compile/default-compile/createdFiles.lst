@@ -1,0 +1,3 @@
+br\com\devmedia\springmvc\controller\CarroController.class
+br\com\devmedia\springmvc\model\dao\CarroDao.class
+br\com\devmedia\springmvc\model\domain\Carro.class
