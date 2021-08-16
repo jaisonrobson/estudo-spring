@@ -1,4 +1,7 @@
+br\com\devmedia\curso\dao\UsuarioDaoImplementation.class
+br\com\devmedia\curso\web\controller\WelcomeController.class
 br\com\devmedia\curso\config\SpringMvcConfig.class
+br\com\devmedia\curso\domain\Usuario.class
 br\com\devmedia\curso\config\RootConfig.class
 br\com\devmedia\curso\config\SpringInitConfig.class
-br\com\devmedia\curso\web\controller\WelcomeController.class
+br\com\devmedia\curso\dao\UsuarioDao.class
