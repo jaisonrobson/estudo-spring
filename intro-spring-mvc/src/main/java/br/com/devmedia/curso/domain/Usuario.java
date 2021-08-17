@@ -18,10 +18,10 @@ public class Usuario {
 	private String nome;
 	
 	@NotBlank
-	@Size(min=3, max=50, message="Campo requerido entre {min} e {max} caracteres.")
+	@Size(min=3, max=50)
 	private String sobrenome;
 	
-	@NotNull(message="O campo 'nascimento' e requerido.")
+	@NotNull
 	@DateTimeFormat(iso = ISO.DATE)
 	private LocalDate nascimento;
 	
