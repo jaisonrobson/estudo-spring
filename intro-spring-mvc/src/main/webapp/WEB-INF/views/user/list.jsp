@@ -13,8 +13,8 @@
     <h1>Lista de Usuários</h1>
     <hr>
     <div>
-
-        <a class="btn btn-default" href="#">Novo Usuário</a>
+		<spring:url value="/usuario/cadastro" var="cadastro" />
+        <a class="btn btn-default" href="${cadastro}">Novo Usuário</a>
     </div>
     <hr>
 
