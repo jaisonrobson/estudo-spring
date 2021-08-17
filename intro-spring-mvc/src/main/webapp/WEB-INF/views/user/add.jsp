@@ -24,15 +24,18 @@
         	<form:hidden path="id" />
             <div class="form-group">
                 <label for="nome">Nome: </label>
-                <form:input path="nome" class="form-control"/>                
+                <form:input path="nome" class="form-control"/>
+                <form:errors path="nome" cssClass="label label-danger" />
             </div>
             <div class="form-group">
                 <label for="sobrenome">Sobrenome: </label>
-                <form:input path="sobrenome"  class="form-control"/>              
+                <form:input path="sobrenome"  class="form-control"/>
+                <form:errors path="sobrenome" cssClass="label label-danger" />              
             </div>
             <div class="form-group">
                 <label for="nascimento">Nascimento: </label>
-                <form:input path="nascimento"  class="form-control" type="date"/>              
+                <form:input path="nascimento"  class="form-control" type="date"/>
+                <form:errors path="nascimento" cssClass="label label-danger" />
             </div>
             <div class="form-group">
                 <label for="sexo">Genero: </label>

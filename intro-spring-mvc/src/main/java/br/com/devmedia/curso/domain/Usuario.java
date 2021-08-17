@@ -2,6 +2,10 @@ package br.com.devmedia.curso.domain;
 
 import java.time.LocalDate;
 
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
+import org.hibernate.validator.constraints.NotBlank;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.format.annotation.DateTimeFormat.ISO;
 
@@ -9,10 +13,15 @@ public class Usuario {
 	
 	private Long id;
 	
+	@NotBlank
+	@Size(min=3, max=50)
 	private String nome;
 	
+	@NotBlank
+	@Size(min=3, max=50, message="Campo requerido entre {min} e {max} caracteres.")
 	private String sobrenome;
 	
+	@NotNull(message="O campo 'nascimento' e requerido.")
 	@DateTimeFormat(iso = ISO.DATE)
 	private LocalDate nascimento;
 	
