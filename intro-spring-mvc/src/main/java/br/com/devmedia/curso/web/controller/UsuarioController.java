@@ -53,4 +53,11 @@ public class UsuarioController {
 		attr.addFlashAttribute("message", "Usuario alterado com sucesso.");
 		return new ModelAndView("redirect:/usuario/todos");
 	}
+	
+	@GetMapping("/delete/{id}")
+	public String delete(@PathVariable("id") Long id, RedirectAttributes attr) {
+		dao.excluir(id);
+		attr.addFlashAttribute("message", "Usuario excluido com sucesso.");
+		return "redirect:/usuario/todos";
+	}
 }
