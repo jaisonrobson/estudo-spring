@@ -35,6 +35,12 @@
             <artifactId>javax.servlet.jsp-api</artifactId>
             <version>2.3.3</version>
         </dependency>
+        
+        <dependency>
+        	<groupId>org.hibernate</groupId>
+        	<artifactId>hibernate-validator</artifactId>
+        	<version>5.3.2.Final</version>
+        </dependency>
     </dependencies>
 
     <build>
