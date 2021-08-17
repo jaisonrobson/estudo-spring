@@ -16,6 +16,8 @@ public class Usuario {
 	@DateTimeFormat(iso = ISO.DATE)
 	private LocalDate nascimento;
 	
+	private TipoSexo sexo;
+	
 	
 	public Usuario(Long id, String nome, String sobrenome) {
 		super();
@@ -30,13 +32,31 @@ public class Usuario {
 		this.nome = nome;
 		this.sobrenome = sobrenome;
 		this.nascimento = nascimento;
+	}	
+
+	public Usuario(Long id, String nome, String sobrenome, LocalDate nascimento, TipoSexo sexo) {
+		super();
+		this.id = id;
+		this.nome = nome;
+		this.sobrenome = sobrenome;
+		this.nascimento = nascimento;
+		this.sexo = sexo;
 	}
 
 	public Usuario() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+		
 	
+	public TipoSexo getSexo() {
+		return sexo;
+	}
+
+	public void setSexo(TipoSexo sexo) {
+		this.sexo = sexo;
+	}
+
 	public LocalDate getNascimento() {
 		return nascimento;
 	}
