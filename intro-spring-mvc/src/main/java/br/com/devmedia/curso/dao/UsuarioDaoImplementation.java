@@ -1,5 +1,6 @@
 package br.com.devmedia.curso.dao;
 
+import java.time.LocalDate;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -20,9 +21,9 @@ public class UsuarioDaoImplementation implements UsuarioDao {
 	private List<Usuario> createUserList() {
 		if (us == null) {
 			us = new LinkedList<>();
-			us.add(new Usuario(System.currentTimeMillis()+1L, "Ana", "da Silva"));
-			us.add(new Usuario(System.currentTimeMillis()+2L, "Jose", "de Almeida"));
-			us.add(new Usuario(System.currentTimeMillis()+3L, "Filomeno", "Espolinari"));
+			us.add( new Usuario(System.currentTimeMillis()+1L, "Ana", "da Silva", LocalDate.of(1994, 11, 8)) );
+			us.add( new Usuario(System.currentTimeMillis()+2L, "Jose", "de Almeida", LocalDate.of(1997, 6, 12)) );
+			us.add( new Usuario(System.currentTimeMillis()+3L, "Filomeno", "Espolinari", LocalDate.of(1977, 1, 5)) );
 			us.add(new Usuario(System.currentTimeMillis()+4L, "Amanda", "Mello"));
 			us.add(new Usuario(System.currentTimeMillis()+5L, "Amanda", "do meu Coracao"));
 			us.add(new Usuario(System.currentTimeMillis()+6L, "Sonia", "Blade"));
@@ -46,6 +47,7 @@ public class UsuarioDaoImplementation implements UsuarioDao {
 			.forEach((u) -> {
 				u.setNome(usuario.getNome());
 				u.setSobrenome(usuario.getSobrenome());
+				u.setNascimento(usuario.getNascimento());
 			});
 	}
 

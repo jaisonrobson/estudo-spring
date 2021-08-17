@@ -1,23 +1,49 @@
 package br.com.devmedia.curso.domain;
 
+import java.time.LocalDate;
+
+import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.format.annotation.DateTimeFormat.ISO;
+
 public class Usuario {
+	
 	private Long id;
+	
 	private String nome;
+	
 	private String sobrenome;
-		
+	
+	@DateTimeFormat(iso = ISO.DATE)
+	private LocalDate nascimento;
+	
+	
 	public Usuario(Long id, String nome, String sobrenome) {
 		super();
 		this.id = id;
 		this.nome = nome;
 		this.sobrenome = sobrenome;
-	}	
-	
+	}
+
+	public Usuario(Long id, String nome, String sobrenome, LocalDate nascimento) {
+		super();
+		this.id = id;
+		this.nome = nome;
+		this.sobrenome = sobrenome;
+		this.nascimento = nascimento;
+	}
 
 	public Usuario() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+	
+	public LocalDate getNascimento() {
+		return nascimento;
+	}
 
+	public void setNascimento(LocalDate nascimento) {
+		this.nascimento = nascimento;
+	}
 
 	public Long getId() {
 		return id;

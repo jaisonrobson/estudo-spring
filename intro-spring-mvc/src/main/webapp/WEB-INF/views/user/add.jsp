@@ -29,7 +29,11 @@
             <div class="form-group">
                 <label for="sobrenome">Sobrenome: </label>
                 <form:input path="sobrenome"  class="form-control"/>              
-            </div>                      
+            </div>
+            <div class="form-group">
+                <label for="nascimento">Nascimento: </label>
+                <form:input path="nascimento"  class="form-control" type="date"/>              
+            </div>
              
             <div class="form-group">
                 <button type="submit" class="btn btn-primary">Confirmar</button>
