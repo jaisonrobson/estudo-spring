@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Informe a quilometragem</title>
+</head>
+
+<body>
+    <h1>Informe a quilometragem</h1>
+
+    <p>Com base nisso calcularemos o tempo de duração mínimo e máximo considerando a velocidade média de caminhada de um adulto.</p>
+
+    <form th:action="@{/exibeResultado}" method="GET">
+        <div>
+            <label th:for="distanciaEmKm">Distância de caminhada</label>
+            <span>
+                <input type="number" th:name="distanciaEmKm" th:placeholder="1" required="required"> KM
+            </span>
+        </div>
+
+        <div>
+            <button type="submit">Enviar</button>
+        </div>
+    </form>
+</body>
+
+</html>
