@@ -12,7 +12,7 @@
 <h1>Dados enviados pelo usuário:</h1>
 
 <p>Nome: <b th:text="${user.name}"/></p>
-<p>Data de nascimento: <b th:text="${{user.birthDate}}"/></p>
+<p>Data de nascimento: <b th:text="${#dates.format(user.birthDate, 'dd/MM/yyyy')}" /></p>
 <p>Apelido: <b th:text="${user.nickname}"/></p>
 <p>Senha: <b th:text="${user.password}"/></p>
 <p>Concorda com os termos de uso? <b th:text="${user.according}"/></p>
