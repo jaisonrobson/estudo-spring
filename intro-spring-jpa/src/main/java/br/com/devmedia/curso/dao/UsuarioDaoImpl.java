@@ -16,6 +16,7 @@ import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
 
 @Repository
+@Transactional
 public class UsuarioDaoImpl implements UsuarioDao {
 
 	@PersistenceContext
@@ -23,7 +24,7 @@ public class UsuarioDaoImpl implements UsuarioDao {
 
 	@Override
 	public void salvar(Usuario usuario) {
-
+		entityManager.persist(usuario);
 	}
 
 	@Override
