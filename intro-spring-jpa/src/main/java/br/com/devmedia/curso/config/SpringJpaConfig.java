@@ -20,10 +20,10 @@ public class SpringJpaConfig {
     @Bean
     public DataSource dataSource(){
         DriverManagerDataSource ds = new DriverManagerDataSource();
-        ds.setDriverClassName("com.mysql.jdbc.Driver");
-        ds.setUrl("jdbc:mysql://localhost:3306/test?createDatabaseIfNotExist=true");
+        ds.setDriverClassName("com.mysql.cj.jdbc.Driver");
+        ds.setUrl("jdbc:mysql://localhost:3306/test?createDatabaseIfNotExist=true&serverTimezone=America/Sao_Paulo");
         ds.setUsername("root");
-        ds.setPassword("root");
+        ds.setPassword("admin");
 
         return ds;
     }
